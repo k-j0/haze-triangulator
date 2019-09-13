@@ -3,7 +3,7 @@
 ![Example image](Dist/Demo.png)
 
 ## Usage
-Download the Unity package from the release on GitHub, or simply place the file *Triangulator.cs* into your project's Assets folder.
+Download the Unity package from [the latest release on GitHub](https://github.com/k-j0/haze-triangulator/releases/tag/v1.0), or simply place the file *Triangulator.cs* into your project's Assets folder.
 
 To triangulate a 2D path, add `using Haze;` at the top of your code file, and call the static function `Triangulator.Triangulate()`, passing a `List<Vector2>` representing your vertices (this assumes the last vertex to be connected to the first, closing off the polygon; no two line segments of the polygon should intersect; the polygon can be either clockwise or counterclockwise). This will return a `List<Triangulator.Triangle>` which can then either be read through and operated upon by your code, or simply fed into `Triangulator.AddTrianglesToMesh()` to convert the triangles to a mesh (or add them to a pre-existing mesh).
 
